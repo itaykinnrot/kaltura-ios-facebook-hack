@@ -47,6 +47,16 @@ NSDictionary *_moviesDict;
 
 }
 
+- (IBAction)TapButton {
+    [self setupMovieTrailerForItem:_selectedItem];
+}
+
+- (void)setButtonTitleWithIndex:(NSInteger) value
+{
+    [_trailerButton setTitle:[_moviesDict objectForKey:[NSNumber numberWithInt:value]]];
+}
+
+
 - (WKPickerItem *) createPickerItemWithImageName:(NSString *)imgname andExtension:(NSString *)imgExtension andCaption:(NSString *)caption
 {
     WKPickerItem *item = [[WKPickerItem alloc] init];
