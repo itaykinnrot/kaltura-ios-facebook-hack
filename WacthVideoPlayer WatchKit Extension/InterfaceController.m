@@ -11,6 +11,7 @@
 
 @interface InterfaceController()
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceMovie *player;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfacePicker *picker;
 
 @end
 
@@ -19,12 +20,41 @@
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"mvcarchitecture" withExtension:@"mp4"];
-    [self.player setMovieURL:url];
-    [self presentMediaPlayerControllerWithURL:url options:nil completion:^(BOOL didPlayToEnd, NSTimeInterval endTime, NSError * _Nullable error) {
-        
-    }];
+    WKPickerItem *item1 = [self createPickerItemWithImageName:@"movie1" andExtension:@"png" andCaption:@"Movie1"];
+//    [item1 setTitle:@"hello"];
+    WKPickerItem *item2 = [self createPickerItemWithImageName:@"movie2" andExtension:@"gif" andCaption:@"Movie2"];
+    WKPickerItem *item3 = [self createPickerItemWithImageName:@"movie3" andExtension:@"png" andCaption:@"Movie3"];
+    
+    [_picker setItems:@[item1, item2, item3]];
+    [_picker setEnabled:YES];
+//    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(highlightLetter:)];
+    
     // Configure interface objects here.
+}
+
+- (IBAction)Tocuh:(NSInteger)value {
+    NSLog(@"%d",value);
+    [self pushControllerWithName:@"PlayerController" context:nil];
+    [self playMovie];
+}
+
+- (WKPickerItem *) createPickerItemWithImageName:(NSString *)imgname andExtension:(NSString *)imgExtension andCaption:(NSString *)caption
+{
+    WKPickerItem *item = [[WKPickerItem alloc] init];
+    //    [item1 setTitle:@"hello"];
+    [item setCaption:caption];
+    NSURL *url = [[NSBundle mainBundle] URLForResource:imgname withExtension:imgExtension];
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    [item setContentImage:[WKImage imageWithImageData:data]];
+    return item;
+}
+
+- (void) playMovie {
+        NSURL *url = [[NSBundle mainBundle] URLForResource:@"mvcarchitecture" withExtension:@"mp4"];
+        [self.player setMovieURL:url];
+        [self presentMediaPlayerControllerWithURL:url options:nil completion:^(BOOL didPlayToEnd, NSTimeInterval endTime, NSError * _Nullable error) {
+    
+        }];
 }
 
 - (void)willActivate {

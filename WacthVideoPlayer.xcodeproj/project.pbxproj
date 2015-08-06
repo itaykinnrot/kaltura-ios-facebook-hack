@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		709F98601B735FFE0073BFB5 /* movie1.png in Resources */ = {isa = PBXBuildFile; fileRef = 709F985F1B735FFD0073BFB5 /* movie1.png */; };
+		709F98621B7360860073BFB5 /* movie2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 709F98611B7360860073BFB5 /* movie2.gif */; };
+		709F98641B7360D80073BFB5 /* movie3.png in Resources */ = {isa = PBXBuildFile; fileRef = 709F98631B7360D80073BFB5 /* movie3.png */; };
 		B374CFD01B7278080094E3B2 /* mvcarchitecture.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B39ED5651B725A82000C17F2 /* mvcarchitecture.mp4 */; };
 		B374CFD11B7278090094E3B2 /* mvcarchitecture.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B39ED5651B725A82000C17F2 /* mvcarchitecture.mp4 */; };
 		B39ED5241B7259D1000C17F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B39ED5231B7259D1000C17F2 /* main.m */; };
@@ -70,6 +73,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		709F985F1B735FFD0073BFB5 /* movie1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = movie1.png; sourceTree = "<group>"; };
+		709F98611B7360860073BFB5 /* movie2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = movie2.gif; sourceTree = "<group>"; };
+		709F98631B7360D80073BFB5 /* movie3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = movie3.png; sourceTree = "<group>"; };
 		B39ED51F1B7259D1000C17F2 /* WacthVideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WacthVideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B39ED5231B7259D1000C17F2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B39ED5251B7259D1000C17F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -174,6 +180,9 @@
 		B39ED5491B7259D1000C17F2 /* WacthVideoPlayer WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				709F98631B7360D80073BFB5 /* movie3.png */,
+				709F98611B7360860073BFB5 /* movie2.gif */,
+				709F985F1B735FFD0073BFB5 /* movie1.png */,
 				B39ED54A1B7259D1000C17F2 /* InterfaceController.h */,
 				B39ED54B1B7259D1000C17F2 /* InterfaceController.m */,
 				B39ED54D1B7259D1000C17F2 /* ExtensionDelegate.h */,
@@ -309,7 +318,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				709F98601B735FFE0073BFB5 /* movie1.png in Resources */,
 				B39ED5541B7259D1000C17F2 /* Assets.xcassets in Resources */,
+				709F98621B7360860073BFB5 /* movie2.gif in Resources */,
+				709F98641B7360D80073BFB5 /* movie3.png in Resources */,
 				B374CFD11B7278090094E3B2 /* mvcarchitecture.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
