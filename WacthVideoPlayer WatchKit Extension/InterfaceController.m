@@ -31,10 +31,10 @@
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
-//    [self.player setMovieURL:[self url]];
-//    [self presentMediaPlayerControllerWithURL:[self url] options:nil completion:^(BOOL didPlayToEnd, NSTimeInterval endTime, NSError * _Nullable error) {
+    [self.player setMovieURL:[self url]];
+    [self presentMediaPlayerControllerWithURL:[self url] options:nil completion:^(BOOL didPlayToEnd, NSTimeInterval endTime, NSError * _Nullable error) {
 //        [self teleport:nil];
-//    }];
+    }];
     // Configure interface objects here.
 }
 
@@ -49,14 +49,13 @@
     
     if ([session isReachable])
     {
-        NSDictionary *dictionary = @{ @"URL": [self url] };
-        [session sendMessage:dictionary
-                replyHandler:^(NSDictionary<NSString *, id> *replyMessage){
-                    NSLog(@"reply");
-                }
-                errorHandler:^(NSError *error){
-                    NSLog(@"error");
-                }];
+        NSDictionary *dictionary = @{ @"TextInput": @"1"};//[self url] };
+
+        [[WCSession defaultSession] sendMessage:dictionary replyHandler:^(NSDictionary<NSString *,id> * __nonnull replyMessage) {
+            NSLog(@"Reply Info: %@", replyMessage);
+        } errorHandler:^(NSError * __nonnull error) {
+            NSLog(@"Error: %@", [error localizedDescription]);
+        }];
     }
     else
     {

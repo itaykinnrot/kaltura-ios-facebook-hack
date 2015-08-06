@@ -10,7 +10,7 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <movie width="1" height="107" alignment="left" hidden="YES" id="0mJ-MF-qNx"/>
+                        <movie width="1" height="107" alignment="left" id="0mJ-MF-qNx"/>
                         <button width="1" alignment="left" title="Teleport!" id="m9A-4U-pkl">
                             <connections>
                                 <action selector="teleport:" destination="AgC-eL-Hgc" id="Chy-8A-Jat"/>

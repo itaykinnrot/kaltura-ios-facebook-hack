@@ -259,7 +259,7 @@
 						DevelopmentTeam = 42TE8DJ769;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
