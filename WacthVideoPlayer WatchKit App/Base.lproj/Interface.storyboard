@@ -10,14 +10,19 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <movie width="1" height="148" alignment="left" id="0mJ-MF-qNx"/>
+                        <movie width="1" height="107" alignment="left" hidden="YES" id="0mJ-MF-qNx"/>
+                        <button width="1" alignment="left" title="Teleport!" id="m9A-4U-pkl">
+                            <connections>
+                                <action selector="teleport:" destination="AgC-eL-Hgc" id="Chy-8A-Jat"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
                         <outlet property="player" destination="0mJ-MF-qNx" id="Tfd-0F-uoP"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="164" y="217"/>
+            <point key="canvasLocation" x="164" y="216"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="rjY-Ar-IMT">
