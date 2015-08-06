@@ -17,7 +17,7 @@
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"mvcarchitecture" withExtension:@"mp4"];
+    NSURL *url = [[NSBundle mainBundle] URLForResource:context[@"name"] withExtension:@"mp4"];
     [self presentMediaPlayerControllerWithURL:url options:nil completion:^(BOOL didPlayToEnd, NSTimeInterval endTime, NSError * _Nullable error) {
         
     }];

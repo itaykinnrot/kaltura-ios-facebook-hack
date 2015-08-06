@@ -10,7 +10,9 @@
 #import "InterfaceController.h"
 
 
-@interface InterfaceController() <WCSessionDelegate>
+@interface InterfaceController() <WCSessionDelegate> {
+    NSDictionary *params;
+}
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfacePicker *picker;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceButton *trailerButton;
 
@@ -20,7 +22,7 @@
 @implementation InterfaceController
 
 NSInteger _selectedItem;
-NSDictionary *_moviesDict;
+NSArray *_movies;
 
 - (instancetype)init {
     self = [super init];
@@ -35,13 +37,14 @@ NSDictionary *_moviesDict;
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
-    _moviesDict = @{@0:@"cloudy",
-                    @1:@"frozen",
-                    @2:@"inside"};
-    WKPickerItem *item1 = [self createPickerItemWithImageName:@"cloudy" andExtension:@"jpg" andCaption:@"Movie1"];
+    
+    _movies = @[@{@"name": @"Cloudy", @"url": @"http://bit.ly/1EaWkxi"},
+  @{@"name": @"Frozen", @"url": @"http://bit.ly/1M7WWdv"},
+  @{@"name": @"Inside Out", @"url": @"http://bit.ly/1gMEdsJ"}];
+    WKPickerItem *item1 = [self createPickerItemWithImageName:@"Cloudy" andExtension:@"jpg" andCaption:@"Movie1"];
     //    [item1 setTitle:@"hello"];
-    WKPickerItem *item2 = [self createPickerItemWithImageName:@"frozen" andExtension:@"jpg" andCaption:@"Movie2"];
-    WKPickerItem *item3 = [self createPickerItemWithImageName:@"inside" andExtension:@"jpg" andCaption:@"Movie3"];
+    WKPickerItem *item2 = [self createPickerItemWithImageName:@"Frozen" andExtension:@"jpg" andCaption:@"Movie2"];
+    WKPickerItem *item3 = [self createPickerItemWithImageName:@"Inside" andExtension:@"jpg" andCaption:@"Movie3"];
     [self setButtonTitleWithIndex:0];
     [_picker setItems:@[item1, item2, item3]];
     [_picker setEnabled:YES];
@@ -52,9 +55,17 @@ NSDictionary *_moviesDict;
     [self setupMovieTrailerForItem:_selectedItem];
 }
 
+- (IBAction)Tocuh:(NSInteger)value {
+    NSLog(@"%d",value);
+    _selectedItem = value;
+    [self setButtonTitleWithIndex:_selectedItem];
+    //    [self pushControllerWithName:@"PlayerController" context:nil];
+    
+}
+
 - (void)setButtonTitleWithIndex:(NSInteger) value
 {
-    [_trailerButton setTitle:[_moviesDict objectForKey:[NSNumber numberWithInt:value]]];
+    [_trailerButton setTitle:_movies[value][@"name"]];
 }
 
 
@@ -70,7 +81,7 @@ NSDictionary *_moviesDict;
 }
 
 - (void) setupMovieTrailerForItem:(NSInteger)value {
-    [self presentControllerWithName:@"player" context:nil];
+    [self presentControllerWithName:@"player" context:_movies[value]];
 //    NSURL *url = [[NSBundle mainBundle] URLForResource:@"mvcarchitecture" withExtension:@"mp4"];
 //    [self.player setMovieURL:url];
 //    [self presentMediaPlayerControllerWithURL:url options:nil completion:^(BOOL didPlayToEnd, NSTimeInterval endTime, NSError * _Nullable error) {

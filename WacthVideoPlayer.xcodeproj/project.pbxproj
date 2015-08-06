@@ -26,12 +26,12 @@
 		B39ED5641B725A2E000C17F2 /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B39ED5631B725A2E000C17F2 /* WatchKit.framework */; };
 		B39ED5661B725A82000C17F2 /* mvcarchitecture.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B39ED5651B725A82000C17F2 /* mvcarchitecture.mp4 */; };
 		B3EFB99D1B73AC3100370A9C /* PlayerControllerInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EFB99C1B73AC3000370A9C /* PlayerControllerInterfaceController.m */; };
-		B3EFB9A21B73B16200370A9C /* cloudy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3EFB99E1B73B16200370A9C /* cloudy.jpg */; };
-		B3EFB9A31B73B16200370A9C /* Inside Out Trailer 2 UK - Official Disney Pixar - HD (1).mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B3EFB99F1B73B16200370A9C /* Inside Out Trailer 2 UK - Official Disney Pixar - HD (1).mp4 */; };
-		B3EFB9A41B73B16200370A9C /* inside.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3EFB9A01B73B16200370A9C /* inside.jpg */; };
-		B3EFB9A51B73B16200370A9C /* Partly Cloudy.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B3EFB9A11B73B16200370A9C /* Partly Cloudy.mp4 */; };
-		B3EFB9A71B73B17E00370A9C /* FROZEN - Let It Go Sing-along - Official Disney HD.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B3EFB9A61B73B17E00370A9C /* FROZEN - Let It Go Sing-along - Official Disney HD.mp4 */; };
-		B3EFB9A91B73B1B400370A9C /* frozen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3EFB9A81B73B1B400370A9C /* frozen.jpg */; };
+		B3EFB9A21B73B16200370A9C /* Cloudy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3EFB99E1B73B16200370A9C /* Cloudy.jpg */; };
+		B3EFB9A31B73B16200370A9C /* Inside.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B3EFB99F1B73B16200370A9C /* Inside.mp4 */; };
+		B3EFB9A41B73B16200370A9C /* Inside.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3EFB9A01B73B16200370A9C /* Inside.jpg */; };
+		B3EFB9A51B73B16200370A9C /* Cloudy.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B3EFB9A11B73B16200370A9C /* Cloudy.mp4 */; };
+		B3EFB9A71B73B17E00370A9C /* Frozen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B3EFB9A61B73B17E00370A9C /* Frozen.mp4 */; };
+		B3EFB9A91B73B1B400370A9C /* Frozen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3EFB9A81B73B1B400370A9C /* Frozen.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,12 +105,12 @@
 		B39ED5651B725A82000C17F2 /* mvcarchitecture.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mvcarchitecture.mp4; sourceTree = "<group>"; };
 		B3EFB99B1B73AC3000370A9C /* PlayerControllerInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerControllerInterfaceController.h; sourceTree = "<group>"; };
 		B3EFB99C1B73AC3000370A9C /* PlayerControllerInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerControllerInterfaceController.m; sourceTree = "<group>"; };
-		B3EFB99E1B73B16200370A9C /* cloudy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cloudy.jpg; sourceTree = "<group>"; };
-		B3EFB99F1B73B16200370A9C /* Inside Out Trailer 2 UK - Official Disney Pixar - HD (1).mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inside Out Trailer 2 UK - Official Disney Pixar - HD (1).mp4"; sourceTree = "<group>"; };
-		B3EFB9A01B73B16200370A9C /* inside.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = inside.jpg; sourceTree = "<group>"; };
-		B3EFB9A11B73B16200370A9C /* Partly Cloudy.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Partly Cloudy.mp4"; sourceTree = "<group>"; };
-		B3EFB9A61B73B17E00370A9C /* FROZEN - Let It Go Sing-along - Official Disney HD.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FROZEN - Let It Go Sing-along - Official Disney HD.mp4"; sourceTree = "<group>"; };
-		B3EFB9A81B73B1B400370A9C /* frozen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = frozen.jpg; sourceTree = "<group>"; };
+		B3EFB99E1B73B16200370A9C /* Cloudy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cloudy.jpg; sourceTree = "<group>"; };
+		B3EFB99F1B73B16200370A9C /* Inside.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Inside.mp4; sourceTree = "<group>"; };
+		B3EFB9A01B73B16200370A9C /* Inside.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Inside.jpg; sourceTree = "<group>"; };
+		B3EFB9A11B73B16200370A9C /* Cloudy.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cloudy.mp4; sourceTree = "<group>"; };
+		B3EFB9A61B73B17E00370A9C /* Frozen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Frozen.mp4; sourceTree = "<group>"; };
+		B3EFB9A81B73B1B400370A9C /* Frozen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Frozen.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,12 +198,12 @@
 				B39ED54D1B7259D1000C17F2 /* ExtensionDelegate.h */,
 				B39ED54E1B7259D1000C17F2 /* ExtensionDelegate.m */,
 				B39ED5501B7259D1000C17F2 /* GlanceController.h */,
-				B3EFB9A61B73B17E00370A9C /* FROZEN - Let It Go Sing-along - Official Disney HD.mp4 */,
-				B3EFB99F1B73B16200370A9C /* Inside Out Trailer 2 UK - Official Disney Pixar - HD (1).mp4 */,
-				B3EFB9A11B73B16200370A9C /* Partly Cloudy.mp4 */,
-				B3EFB99E1B73B16200370A9C /* cloudy.jpg */,
-				B3EFB9A81B73B1B400370A9C /* frozen.jpg */,
-				B3EFB9A01B73B16200370A9C /* inside.jpg */,
+				B3EFB9A61B73B17E00370A9C /* Frozen.mp4 */,
+				B3EFB99F1B73B16200370A9C /* Inside.mp4 */,
+				B3EFB9A11B73B16200370A9C /* Cloudy.mp4 */,
+				B3EFB99E1B73B16200370A9C /* Cloudy.jpg */,
+				B3EFB9A81B73B1B400370A9C /* Frozen.jpg */,
+				B3EFB9A01B73B16200370A9C /* Inside.jpg */,
 				B39ED5511B7259D1000C17F2 /* GlanceController.m */,
 				B39ED5651B725A82000C17F2 /* mvcarchitecture.mp4 */,
 				B39ED5531B7259D1000C17F2 /* Assets.xcassets */,
@@ -340,14 +340,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3EFB9A51B73B16200370A9C /* Partly Cloudy.mp4 in Resources */,
-				B3EFB9A21B73B16200370A9C /* cloudy.jpg in Resources */,
-				B3EFB9A71B73B17E00370A9C /* FROZEN - Let It Go Sing-along - Official Disney HD.mp4 in Resources */,
-				B3EFB9A31B73B16200370A9C /* Inside Out Trailer 2 UK - Official Disney Pixar - HD (1).mp4 in Resources */,
+				B3EFB9A51B73B16200370A9C /* Cloudy.mp4 in Resources */,
+				B3EFB9A21B73B16200370A9C /* Cloudy.jpg in Resources */,
+				B3EFB9A71B73B17E00370A9C /* Frozen.mp4 in Resources */,
+				B3EFB9A31B73B16200370A9C /* Inside.mp4 in Resources */,
 				B39ED5541B7259D1000C17F2 /* Assets.xcassets in Resources */,
-				B3EFB9A91B73B1B400370A9C /* frozen.jpg in Resources */,
+				B3EFB9A91B73B1B400370A9C /* Frozen.jpg in Resources */,
 				B374CFD11B7278090094E3B2 /* mvcarchitecture.mp4 in Resources */,
-				B3EFB9A41B73B16200370A9C /* inside.jpg in Resources */,
+				B3EFB9A41B73B16200370A9C /* Inside.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
