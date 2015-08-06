@@ -31,6 +31,17 @@
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
+    _moviesDict = @{@0:@"Social Network",
+                    @1:@"Disney",
+                    @2:@"Planes"};
+    WKPickerItem *item1 = [self createPickerItemWithImageName:@"movie1" andExtension:@"png" andCaption:@"Movie1"];
+    //    [item1 setTitle:@"hello"];
+    WKPickerItem *item2 = [self createPickerItemWithImageName:@"movie2" andExtension:@"gif" andCaption:@"Movie2"];
+    WKPickerItem *item3 = [self createPickerItemWithImageName:@"movie3" andExtension:@"png" andCaption:@"Movie3"];
+    [self setButtonTitleWithIndex:0];
+    [_picker setItems:@[item1, item2, item3]];
+    [_picker setEnabled:YES];
+
 }
 
 - (IBAction)teleport:(id)sender
