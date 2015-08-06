@@ -6,9 +6,10 @@
 //  Copyright © 2015 kaltura. All rights reserved.
 //
 
+@import WatchConnectivity;
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <WCSessionDelegate>
 
 @end
 
@@ -17,6 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    if ([WCSession isSupported]) {
+        [WCSession defaultSession].delegate = self;
+        [[WCSession defaultSession] activateSession];
+    }
+
     return YES;
 }
 
@@ -36,6 +42,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    NSLog(@"active");
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
@@ -44,7 +51,19 @@
 
 - (void)application:(UIApplication *)application handleWatchKitExtensionRequest:(nullable NSDictionary *)userInfo reply:(void(^)(NSDictionary * __nullable replyInfo))reply
 {
+    UIBackgroundTaskIdentifier backgroundTaskIdentifier = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
+        
+        if (backgroundTaskIdentifier != UIBackgroundTaskInvalid)
+        {
+            [[UIApplication sharedApplication] endBackgroundTask:backgroundTaskIdentifier];
+        }
+    }];
 
-    
+    UILocalNotification *localNotif = [[UILocalNotification alloc] init];
+    localNotif.alertBody = @"Watch?";
+    localNotif.soundName  = UILocalNotificationDefaultSoundName;
+    localNotif.userInfo = userInfo;
+    [[UIApplication sharedApplication] presentLocalNotificationNow:localNotif];
 }
+
 @end

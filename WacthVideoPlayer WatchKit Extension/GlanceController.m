@@ -20,6 +20,11 @@
     [super awakeWithContext:context];
 
     // Configure interface objects here.
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"mvcarchitecture" withExtension:@"mp4"];
+    //    [self.player setMovieURL:url];
+    [self presentMediaPlayerControllerWithURL:url options:nil completion:^(BOOL didPlayToEnd, NSTimeInterval endTime, NSError * _Nullable error) {
+        
+    }];
 }
 
 - (void)willActivate {
