@@ -59,6 +59,7 @@
 
 - (void)peerConnected {
     NSLog(@"Peer connected");
+    [self.avPlayerViewcontroller.player pause];
     self.osxBtn.titleLabel.backgroundColor = [UIColor greenColor];
     [self.proxy sendDictionary:@{@"urlString" : self.mediaUrl,
                                  @"offset" : @(CMTimeGetSeconds(self.avPlayerViewcontroller.player.currentTime))}];
