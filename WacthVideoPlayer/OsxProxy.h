@@ -11,6 +11,7 @@
 @protocol OsxProxyDelegate
 
 - (void)peerConnected;
+- (void)peerDisconnected;
 
 @end
 
@@ -23,6 +24,7 @@
 - (void)sendData:(NSData *)data;
 - (void)sendString:(NSString *)string;
 - (void)sendDictionary:(NSDictionary *)dictionary;
+- (void)disconnectLocalPeer;
 
 @property (weak) id<OsxProxyDelegate> delegate;
 

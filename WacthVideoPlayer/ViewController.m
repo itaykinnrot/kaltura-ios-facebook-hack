@@ -18,14 +18,11 @@
 @property (weak, nonatomic) IBOutlet UIView *avPlayerView;
 @property (nonatomic, retain) AVPlayerViewController *avPlayerViewcontroller;
 @property OsxProxy *proxy;
+@property (weak, nonatomic) IBOutlet UIButton *osxBtn;
 
 @end
 
 @implementation ViewController
-
-- (IBAction)sendContentToOSX:(id)sender {
-    [self.proxy start];
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -52,10 +49,24 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)sendContentToOSX:(id)sender {
+    if (self.osxBtn.backgroundColor == [UIColor greenColor]) {
+        [self.proxy disconnectLocalPeer];
+    } else {
+        [self.proxy start];
+    }
+}
+
 - (void)peerConnected {
     NSLog(@"Peer connected");
+    self.osxBtn.titleLabel.backgroundColor = [UIColor greenColor];
     [self.proxy sendDictionary:@{@"urlString" : self.mediaUrl,
                                  @"offset" : @(CMTimeGetSeconds(self.avPlayerViewcontroller.player.currentTime))}];
+}
+
+- (void)peerDisconnected {
+    NSLog(@"Peer disconnected");
+    self.osxBtn.titleLabel.backgroundColor = [UIColor blueColor];
 }
 
 @end

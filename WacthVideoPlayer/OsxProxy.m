@@ -93,6 +93,10 @@ static NSString *kServiceType = @"iosToOsx";
     }
 }
 
+- (void)disconnectLocalPeer {
+    [self.session disconnect];
+}
+
 - (void)sendString:(NSString *)string {
     [self sendData:[string dataUsingEncoding:NSUTF8StringEncoding]];
 }
@@ -114,6 +118,7 @@ static NSString *kServiceType = @"iosToOsx";
         case MCSessionStateNotConnected:
             NSLog(@"%@ disconnected", peerID);
             [self.peers removeObject:peerID];
+            [self.delegate peerDisconnected];
             break;
     }
 }
