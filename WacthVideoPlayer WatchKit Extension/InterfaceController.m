@@ -12,6 +12,8 @@
 
 @interface InterfaceController() <WCSessionDelegate>
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceMovie *player;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfacePicker *picker;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceButton *trailerButton;
 
 @end
 
