@@ -29,8 +29,15 @@
                                     <action selector="sendContentToOSX:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gq7-BO-olo"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFs-yF-eFa">
+                                <rect key="frame" x="20" y="11" width="38" height="22"/>
+                                <state key="normal" image="burger.png"/>
+                                <connections>
+                                    <action selector="onBurger:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9kp-Uq-taL"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Mf1-8H-HVe" firstAttribute="top" secondItem="2iL-FQ-lEh" secondAttribute="bottom" constant="31" id="AXd-PS-efJ"/>
                             <constraint firstItem="2iL-FQ-lEh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="CHK-SF-729"/>
@@ -44,7 +51,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="360" y="352"/>
+            <point key="canvasLocation" x="344" y="268"/>
         </scene>
         <!--AV Player View Controller-->
         <scene sceneID="sjJ-MY-1iH">
@@ -58,6 +65,10 @@
         <scene sceneID="VOb-eQ-ieN">
             <objects>
                 <viewController id="EKi-VY-g1X" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GlS-fq-FzE"/>
+                        <viewControllerLayoutGuide type="bottom" id="qry-P9-Etk"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="elY-tC-pFY">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,4 +79,7 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="burger.png" width="19" height="17"/>
+    </resources>
 </document>

@@ -11,14 +11,16 @@
 #import <AVKit/AVKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import "OsxProxy.h"
+#import "RNFrostedSidebar.h"
 
-@interface ViewController () <OsxProxyDelegate>
+@interface ViewController () <OsxProxyDelegate, RNFrostedSidebarDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *avPlayerLabel;
 @property (weak, nonatomic) IBOutlet UIView *avPlayerView;
 @property (nonatomic, retain) AVPlayerViewController *avPlayerViewcontroller;
 @property OsxProxy *proxy;
 @property (weak, nonatomic) IBOutlet UIButton *osxBtn;
+@property (nonatomic, strong) NSMutableIndexSet *optionIndices;
 
 @end
 
@@ -26,6 +28,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.optionIndices = [NSMutableIndexSet indexSetWithIndex:1];
     
     self.proxy = [OsxProxy new];
     self.proxy.delegate = self;
@@ -68,6 +72,40 @@
 - (void)peerDisconnected {
     NSLog(@"Peer disconnected");
     self.osxBtn.titleLabel.backgroundColor = [UIColor blueColor];
+}
+
+- (IBAction)onBurger:(id)sender {
+    NSArray *images = @[
+                        [UIImage imageNamed:@"gear"]
+                        
+                        ];
+    NSArray *colors = @[
+                        [UIColor colorWithRed:240/255.f green:159/255.f blue:254/255.f alpha:1]
+                        ];
+    
+    RNFrostedSidebar *callout = [[RNFrostedSidebar alloc] initWithImages:images selectedIndices:self.optionIndices borderColors:colors];
+    //    RNFrostedSidebar *callout = [[RNFrostedSidebar alloc] initWithImages:images];
+    callout.delegate = self;
+    //    callout.showFromRight = YES;
+    [callout show];
+}
+
+#pragma mark - RNFrostedSidebarDelegate
+
+- (void)sidebar:(RNFrostedSidebar *)sidebar didTapItemAtIndex:(NSUInteger)index {
+    NSLog(@"Tapped item at index %lu",(unsigned long)index);
+    if (index == 3) {
+        [sidebar dismissAnimated:YES completion:nil];
+    }
+}
+
+- (void)sidebar:(RNFrostedSidebar *)sidebar didEnable:(BOOL)itemEnabled itemAtIndex:(NSUInteger)index {
+    if (itemEnabled) {
+        [self.optionIndices addIndex:index];
+    }
+    else {
+        [self.optionIndices removeIndex:index];
+    }
 }
 
 @end
