@@ -70,6 +70,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		89F373031B7386190019F4DA /* WacthVideoPlayer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WacthVideoPlayer.entitlements; sourceTree = "<group>"; };
 		B39ED51F1B7259D1000C17F2 /* WacthVideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WacthVideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B39ED5231B7259D1000C17F2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B39ED5251B7259D1000C17F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -140,6 +141,7 @@
 		B39ED5211B7259D1000C17F2 /* WacthVideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				89F373031B7386190019F4DA /* WacthVideoPlayer.entitlements */,
 				B39ED5251B7259D1000C17F2 /* AppDelegate.h */,
 				B39ED5261B7259D1000C17F2 /* AppDelegate.m */,
 				B39ED5281B7259D1000C17F2 /* ViewController.h */,
@@ -254,6 +256,12 @@
 				TargetAttributes = {
 					B39ED51E1B7259D1000C17F2 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 42TE8DJ769;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					B39ED5351B7259D1000C17F2 = {
 						CreatedOnToolsVersion = 7.0;
@@ -526,10 +534,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WacthVideoPlayer/WacthVideoPlayer.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WacthVideoPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.WacthVideoPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -537,10 +549,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WacthVideoPlayer/WacthVideoPlayer.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WacthVideoPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.WacthVideoPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
