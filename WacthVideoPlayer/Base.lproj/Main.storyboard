@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,21 +17,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2iL-FQ-lEh">
-                                <rect key="frame" x="175" y="67" width="324" height="187"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2iL-FQ-lEh">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <connections>
                                     <segue destination="4b4-xl-mse" kind="embed" identifier="showMovie" id="H4B-eV-DEe"/>
                                 </connections>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mf1-8H-HVe">
-                                <rect key="frame" x="322" y="285" width="31" height="30"/>
-                                <state key="normal" title="OSX"/>
-                                <connections>
-                                    <action selector="sendContentToOSX:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gq7-BO-olo"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFs-yF-eFa">
-                                <rect key="frame" x="20" y="11" width="38" height="22"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFs-yF-eFa">
+                                <rect key="frame" x="20" y="40" width="25" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="PcP-4z-kbi"/>
+                                    <constraint firstAttribute="width" constant="16" id="tye-hU-Iin"/>
+                                </constraints>
                                 <state key="normal" image="burger.png"/>
                                 <connections>
                                     <action selector="onBurger:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9kp-Uq-taL"/>
@@ -39,15 +37,28 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Mf1-8H-HVe" firstAttribute="top" secondItem="2iL-FQ-lEh" secondAttribute="bottom" constant="31" id="AXd-PS-efJ"/>
+                            <constraint firstItem="GFs-yF-eFa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-8" id="22o-iW-BM4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2iL-FQ-lEh" secondAttribute="bottom" id="88r-eN-Nk2"/>
                             <constraint firstItem="2iL-FQ-lEh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="CHK-SF-729"/>
+                            <constraint firstAttribute="trailing" secondItem="2iL-FQ-lEh" secondAttribute="trailing" id="CM9-wY-nPf"/>
+                            <constraint firstItem="2iL-FQ-lEh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="IWx-as-efG"/>
                             <constraint firstItem="2iL-FQ-lEh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Njn-4s-5Lf"/>
-                            <constraint firstItem="Mf1-8H-HVe" firstAttribute="centerX" secondItem="2iL-FQ-lEh" secondAttribute="centerX" id="wUV-CS-JIg"/>
+                            <constraint firstAttribute="trailing" secondItem="2iL-FQ-lEh" secondAttribute="trailing" id="NuI-91-xUs"/>
+                            <constraint firstItem="2iL-FQ-lEh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="U9N-NI-E3I"/>
+                            <constraint firstItem="GFs-yF-eFa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="13" id="d4B-4x-HyG"/>
+                            <constraint firstItem="2iL-FQ-lEh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iTw-pA-9rd"/>
+                            <constraint firstItem="2iL-FQ-lEh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="lfU-Mh-u04"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="CHK-SF-729"/>
+                                <exclude reference="CM9-wY-nPf"/>
+                                <exclude reference="Njn-4s-5Lf"/>
+                                <exclude reference="iTw-pA-9rd"/>
+                                <exclude reference="lfU-Mh-u04"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <connections>
-                        <outlet property="osxBtn" destination="Mf1-8H-HVe" id="QCS-nX-11u"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

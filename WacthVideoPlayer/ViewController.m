@@ -24,7 +24,9 @@
 
 @end
 
-@implementation ViewController
+@implementation ViewController {
+    BOOL itemSelected;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -53,8 +55,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)sendContentToOSX:(id)sender {
-    if (self.osxBtn.backgroundColor == [UIColor greenColor]) {
+- (void)sendContentToOSX {
+    if (itemSelected) {
         [self.proxy disconnectLocalPeer];
     } else {
         [self.proxy start];
@@ -76,7 +78,7 @@
 
 - (IBAction)onBurger:(id)sender {
     NSArray *images = @[
-                        [UIImage imageNamed:@"gear"]
+                        [UIImage imageNamed:@"globe"]
                         
                         ];
     NSArray *colors = @[
@@ -94,12 +96,14 @@
 
 - (void)sidebar:(RNFrostedSidebar *)sidebar didTapItemAtIndex:(NSUInteger)index {
     NSLog(@"Tapped item at index %lu",(unsigned long)index);
-    if (index == 3) {
+    if (index == 0) {
         [sidebar dismissAnimated:YES completion:nil];
+        [self sendContentToOSX];
     }
 }
 
 - (void)sidebar:(RNFrostedSidebar *)sidebar didEnable:(BOOL)itemEnabled itemAtIndex:(NSUInteger)index {
+    itemSelected = itemEnabled;
     if (itemEnabled) {
         [self.optionIndices addIndex:index];
     }
