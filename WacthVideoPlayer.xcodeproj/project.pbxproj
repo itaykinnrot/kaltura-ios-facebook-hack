@@ -95,6 +95,7 @@
 		B39ED5551B7259D1000C17F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B39ED5631B725A2E000C17F2 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.0.sdk/System/Library/Frameworks/WatchKit.framework; sourceTree = DEVELOPER_DIR; };
 		B39ED5651B725A82000C17F2 /* mvcarchitecture.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mvcarchitecture.mp4; sourceTree = "<group>"; };
+		B3EFB99A1B7372FF00370A9C /* WacthVideoPlayer WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "WacthVideoPlayer WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +175,7 @@
 		B39ED5491B7259D1000C17F2 /* WacthVideoPlayer WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				B3EFB99A1B7372FF00370A9C /* WacthVideoPlayer WatchKit Extension.entitlements */,
 				B39ED54A1B7259D1000C17F2 /* InterfaceController.h */,
 				B39ED54B1B7259D1000C17F2 /* InterfaceController.m */,
 				B39ED54D1B7259D1000C17F2 /* ExtensionDelegate.h */,
@@ -260,6 +262,12 @@
 					};
 					B39ED5441B7259D1000C17F2 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = VNQ8G44ZN2;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -463,11 +471,14 @@
 		B39ED5591B7259D1000C17F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "WacthVideoPlayer WatchKit Extension/WacthVideoPlayer WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "WacthVideoPlayer WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.WacthVideoPlayer.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -478,11 +489,14 @@
 		B39ED55A1B7259D1000C17F2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "WacthVideoPlayer WatchKit Extension/WacthVideoPlayer WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "WacthVideoPlayer WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.WacthVideoPlayer.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;

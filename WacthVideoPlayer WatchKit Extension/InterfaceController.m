@@ -13,14 +13,15 @@
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceMovie *player;
 
 @end
-
+//5050246
 
 @implementation InterfaceController
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
     NSURL *url = [[NSBundle mainBundle] URLForResource:@"mvcarchitecture" withExtension:@"mp4"];
-    [self.player setMovieURL:url];
+    url = [NSURL URLWithString:@"http://cfvod.kaltura.com/pd/p/1281471/sp/128147100/serveFlavor/entryId/1_3ts1ms9c/v/1/flavorId/1_6o55whsj/name/a.mp4"];
+//    [self.player setMovieURL:url];
     [self presentMediaPlayerControllerWithURL:url options:nil completion:^(BOOL didPlayToEnd, NSTimeInterval endTime, NSError * _Nullable error) {
         
     }];
