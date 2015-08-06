@@ -5,11 +5,13 @@
 //  Created by Nissim Pardo on 8/6/15.
 //  Copyright © 2015 kaltura. All rights reserved.
 //
-
+@import WatchConnectivity;
 #import "PlayerControllerInterfaceController.h"
 
-@interface PlayerControllerInterfaceController ()
-@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceMovie *player;
+@interface PlayerControllerInterfaceController () <WCSessionDelegate>{
+    NSDictionary *params;
+}
+
 
 @end
 
@@ -17,14 +19,36 @@
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
+    params = ((NSDictionary *)context).copy;
     NSURL *url = [[NSBundle mainBundle] URLForResource:context[@"name"] withExtension:@"mp4"];
     [self presentMediaPlayerControllerWithURL:url options:nil completion:^(BOOL didPlayToEnd, NSTimeInterval endTime, NSError * _Nullable error) {
         
     }];
     // Configure interface objects here.
 }
-- (IBAction)moveToDevice {
+
+- (IBAction)macPressed {
     
+}
+
+- (IBAction)iphonePressed {
+    WCSession *session = [WCSession defaultSession];
+    
+    if ([session isReachable])
+    {
+        NSDictionary *dictionary = @{ @"url": params[@"url"]};
+        
+        [[WCSession defaultSession] sendMessage:dictionary replyHandler:^(NSDictionary<NSString *,id> * __nonnull replyMessage) {
+            NSLog(@"Reply Info: %@", replyMessage);
+            
+        } errorHandler:^(NSError * __nonnull error) {
+            NSLog(@"Error: %@", [error localizedDescription]);
+        }];
+    }
+    else
+    {
+        NSLog(@"session not reachable");
+    }
 }
 
 - (void)willActivate {

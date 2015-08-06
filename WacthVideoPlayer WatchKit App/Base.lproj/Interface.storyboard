@@ -48,12 +48,16 @@
             <objects>
                 <controller identifier="player" hidesWhenLoading="NO" id="EPB-yQ-ehH" customClass="PlayerControllerInterfaceController">
                     <items>
-                        <button width="136" alignment="center" verticalAlignment="center" title="Button" id="hf5-9Q-gj4">
+                        <button width="136" alignment="center" verticalAlignment="center" title="Mac" id="hf5-9Q-gj4">
                             <connections>
-                                <action selector="moveToDevice" destination="EPB-yQ-ehH" id="xPE-1G-hmm"/>
+                                <action selector="macPressed" destination="EPB-yQ-ehH" id="sdj-Yb-mEI"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="left" title="Button" id="UUe-h5-Bcg"/>
+                        <button width="1" alignment="left" title="iPhone" id="UUe-h5-Bcg">
+                            <connections>
+                                <action selector="iphonePressed" destination="EPB-yQ-ehH" id="4t6-SF-95s"/>
+                            </connections>
+                        </button>
                     </items>
                 </controller>
             </objects>
