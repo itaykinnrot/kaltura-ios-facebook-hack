@@ -1,29 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8164.2" systemVersion="14E46" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8164.2" systemVersion="14E46" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fid-Eu-Qc1">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8083.2"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
-        <scene sceneID="aou-V4-d1y">
-            <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
-                    <items>
-                        <movie width="1" height="107" alignment="left" id="0mJ-MF-qNx"/>
-                        <button width="1" alignment="left" title="Teleport!" id="m9A-4U-pkl">
-                            <connections>
-                                <action selector="teleport:" destination="AgC-eL-Hgc" id="Chy-8A-Jat"/>
-                            </connections>
-                        </button>
-                    </items>
-                    <connections>
-                        <outlet property="player" destination="0mJ-MF-qNx" id="Tfd-0F-uoP"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="164" y="216"/>
-        </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="rjY-Ar-IMT">
             <objects>
@@ -36,6 +17,43 @@
                 </glanceController>
             </objects>
             <point key="canvasLocation" x="164" y="514"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="Q4N-Wa-2sr">
+            <objects>
+                <controller id="fid-Eu-Qc1" customClass="InterfaceController">
+                    <items>
+                        <button width="1" height="22" alignment="left" title="Play Trailer" id="1fY-b2-l9W">
+                            <connections>
+                                <action selector="TapButton" destination="fid-Eu-Qc1" id="wuC-O2-gnR"/>
+                            </connections>
+                        </button>
+                        <picker width="1" height="125" alignment="left" style="sequence" focusStyle="stack" id="UhB-7J-3PN">
+                            <connections>
+                                <action selector="Tocuh:" destination="fid-Eu-Qc1" id="a9R-Ye-bwd"/>
+                            </connections>
+                        </picker>
+                    </items>
+                    <color key="backgroundColor" red="1" green="0.21841827110000001" blue="0.17984425139999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="picker" destination="UhB-7J-3PN" id="X79-a5-yM2"/>
+                        <outlet property="trailerButton" destination="1fY-b2-l9W" id="UD4-7j-3MV"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="59" y="144"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="WGJ-kN-n9r">
+            <objects>
+                <controller hidesWhenLoading="NO" id="EPB-yQ-ehH">
+                    <items>
+                        <movie width="134" height="100" alignment="center" videoGravity="resize" id="VwU-wb-qrh"/>
+                        <button width="136" alignment="center" verticalAlignment="bottom" title="Button" id="hf5-9Q-gj4"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="310" y="147"/>
         </scene>
     </scenes>
 </document>
