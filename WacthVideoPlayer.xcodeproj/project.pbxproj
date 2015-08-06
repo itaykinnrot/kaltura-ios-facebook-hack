@@ -25,6 +25,8 @@
 		B39ED5541B7259D1000C17F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B39ED5531B7259D1000C17F2 /* Assets.xcassets */; };
 		B39ED5641B725A2E000C17F2 /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B39ED5631B725A2E000C17F2 /* WatchKit.framework */; };
 		B39ED5661B725A82000C17F2 /* mvcarchitecture.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B39ED5651B725A82000C17F2 /* mvcarchitecture.mp4 */; };
+		BFB1CAF21B73773D00B5ADAB /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB1CAF11B73773D00B5ADAB /* AVKit.framework */; };
+		BFB1CAF51B73972B00B5ADAB /* OsxProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB1CAF41B73972B00B5ADAB /* OsxProxy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,9 @@
 		B39ED5551B7259D1000C17F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B39ED5631B725A2E000C17F2 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.0.sdk/System/Library/Frameworks/WatchKit.framework; sourceTree = DEVELOPER_DIR; };
 		B39ED5651B725A82000C17F2 /* mvcarchitecture.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mvcarchitecture.mp4; sourceTree = "<group>"; };
+		BFB1CAF11B73773D00B5ADAB /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		BFB1CAF31B73972B00B5ADAB /* OsxProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OsxProxy.h; sourceTree = "<group>"; };
+		BFB1CAF41B73972B00B5ADAB /* OsxProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OsxProxy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFB1CAF21B73773D00B5ADAB /* AVKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +125,7 @@
 		B39ED5161B7259D1000C17F2 = {
 			isa = PBXGroup;
 			children = (
+				BFB1CAF11B73773D00B5ADAB /* AVKit.framework */,
 				B39ED5631B725A2E000C17F2 /* WatchKit.framework */,
 				B39ED5211B7259D1000C17F2 /* WacthVideoPlayer */,
 				B39ED53A1B7259D1000C17F2 /* WacthVideoPlayer WatchKit App */,
@@ -149,6 +156,8 @@
 				B39ED5301B7259D1000C17F2 /* LaunchScreen.storyboard */,
 				B39ED5331B7259D1000C17F2 /* Info.plist */,
 				B39ED5221B7259D1000C17F2 /* Supporting Files */,
+				BFB1CAF31B73972B00B5ADAB /* OsxProxy.h */,
+				BFB1CAF41B73972B00B5ADAB /* OsxProxy.m */,
 			);
 			path = WacthVideoPlayer;
 			sourceTree = "<group>";
@@ -260,6 +269,7 @@
 					};
 					B39ED5441B7259D1000C17F2 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = MK4GH73U54;
 					};
 				};
 			};
@@ -322,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B39ED52A1B7259D1000C17F2 /* ViewController.m in Sources */,
+				BFB1CAF51B73972B00B5ADAB /* OsxProxy.m in Sources */,
 				B39ED5271B7259D1000C17F2 /* AppDelegate.m in Sources */,
 				B39ED5241B7259D1000C17F2 /* main.m in Sources */,
 			);
@@ -397,6 +408,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Eliza Sapir (2FQZ6B8TJ4)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -419,6 +431,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "843e5805-196a-452e-8057-bc1bb69df5cd";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -455,6 +468,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "843e5805-196a-452e-8057-bc1bb69df5cd";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -463,11 +477,13 @@
 		B39ED5591B7259D1000C17F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "WacthVideoPlayer WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.WacthVideoPlayer.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -478,11 +494,13 @@
 		B39ED55A1B7259D1000C17F2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "WacthVideoPlayer WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.WacthVideoPlayer.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -526,10 +544,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Eliza Sapir (JNZ3J44F89)";
 				INFOPLIST_FILE = WacthVideoPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.WacthVideoPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "843e5805-196a-452e-8057-bc1bb69df5cd";
 			};
 			name = Debug;
 		};
@@ -541,6 +561,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.WacthVideoPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "843e5805-196a-452e-8057-bc1bb69df5cd";
 			};
 			name = Release;
 		};
