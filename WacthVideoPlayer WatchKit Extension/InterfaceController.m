@@ -12,6 +12,7 @@
 @interface InterfaceController()
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceMovie *player;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfacePicker *picker;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceButton *trailerButton;
 
 @end
 
@@ -19,14 +20,18 @@
 @implementation InterfaceController
 
 NSInteger _selectedItem;
+NSDictionary *_moviesDict;
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
+    _moviesDict = @{@0:@"Social Network",
+                    @1:@"Disney",
+                    @2:@"Planes"};
     WKPickerItem *item1 = [self createPickerItemWithImageName:@"movie1" andExtension:@"png" andCaption:@"Movie1"];
 //    [item1 setTitle:@"hello"];
     WKPickerItem *item2 = [self createPickerItemWithImageName:@"movie2" andExtension:@"gif" andCaption:@"Movie2"];
     WKPickerItem *item3 = [self createPickerItemWithImageName:@"movie3" andExtension:@"png" andCaption:@"Movie3"];
-    
+    [self setButtonTitleWithIndex:0];
     [_picker setItems:@[item1, item2, item3]];
     [_picker setEnabled:YES];
 
@@ -36,9 +41,15 @@ NSInteger _selectedItem;
     [self setupMovieTrailerForItem:_selectedItem];
 }
 
+- (void)setButtonTitleWithIndex:(NSInteger) value
+{
+    [_trailerButton setTitle:[_moviesDict objectForKey:[NSNumber numberWithInt:value]]];
+}
+
 - (IBAction)Tocuh:(NSInteger)value {
     NSLog(@"%d",value);
     _selectedItem = value;
+    [self setButtonTitleWithIndex:_selectedItem];
 //    [self pushControllerWithName:@"PlayerController" context:nil];
     
 }
@@ -47,7 +58,7 @@ NSInteger _selectedItem;
 {
     WKPickerItem *item = [[WKPickerItem alloc] init];
 //        [item setTitle:@"hello"];
-    [item setCaption:caption];
+//    [item setCaption:caption];
     NSURL *url = [[NSBundle mainBundle] URLForResource:imgname withExtension:imgExtension];
     NSData *data = [NSData dataWithContentsOfURL:url];
     [item setContentImage:[WKImage imageWithImageData:data]];

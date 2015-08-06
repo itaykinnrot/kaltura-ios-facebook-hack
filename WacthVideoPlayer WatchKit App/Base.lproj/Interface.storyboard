@@ -10,12 +10,12 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <button width="1" height="22" alignment="left" title="Button" id="2hN-qF-hwG">
+                        <button width="1" height="22" alignment="left" title="Play Trailer" id="2hN-qF-hwG">
                             <connections>
                                 <action selector="TapButton" destination="AgC-eL-Hgc" id="bl8-Nn-fuI"/>
                             </connections>
                         </button>
-                        <picker width="1" height="138" alignment="left" style="sequence" focusStyle="sequence" id="Vvx-oV-Bhd">
+                        <picker width="1" height="125" alignment="left" style="sequence" focusStyle="stack" id="Vvx-oV-Bhd">
                             <connections>
                                 <action selector="Tocuh:" destination="AgC-eL-Hgc" id="jsQ-BC-EaZ"/>
                             </connections>
@@ -25,6 +25,7 @@
                     <connections>
                         <outlet property="picker" destination="Vvx-oV-Bhd" id="gdq-FV-wwI"/>
                         <outlet property="player" destination="0mJ-MF-qNx" id="Tfd-0F-uoP"/>
+                        <outlet property="trailerButton" destination="2hN-qF-hwG" id="clR-Mv-Lav"/>
                     </connections>
                 </controller>
             </objects>
