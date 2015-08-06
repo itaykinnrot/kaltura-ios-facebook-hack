@@ -10,7 +10,12 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <picker width="1" height="154" alignment="left" style="sequence" focusStyle="sequence" id="Vvx-oV-Bhd">
+                        <button width="1" height="22" alignment="left" title="Button" id="2hN-qF-hwG">
+                            <connections>
+                                <action selector="TapButton" destination="AgC-eL-Hgc" id="bl8-Nn-fuI"/>
+                            </connections>
+                        </button>
+                        <picker width="1" height="138" alignment="left" style="sequence" focusStyle="sequence" id="Vvx-oV-Bhd">
                             <connections>
                                 <action selector="Tocuh:" destination="AgC-eL-Hgc" id="jsQ-BC-EaZ"/>
                             </connections>
@@ -23,7 +28,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="164" y="218"/>
+            <point key="canvasLocation" x="164" y="202.5"/>
         </scene>
         <!--PlayerController-->
         <scene sceneID="bp6-oy-gLf">
