@@ -47,6 +47,25 @@ NSDictionary *_moviesDict;
 
 }
 
+- (WKPickerItem *) createPickerItemWithImageName:(NSString *)imgname andExtension:(NSString *)imgExtension andCaption:(NSString *)caption
+{
+    WKPickerItem *item = [[WKPickerItem alloc] init];
+    //        [item setTitle:@"hello"];
+    //    [item setCaption:caption];
+    NSURL *url = [[NSBundle mainBundle] URLForResource:imgname withExtension:imgExtension];
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    [item setContentImage:[WKImage imageWithImageData:data]];
+    return item;
+}
+
+- (void) setupMovieTrailerForItem:(NSInteger)value {
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"mvcarchitecture" withExtension:@"mp4"];
+    [self.player setMovieURL:url];
+    [self presentMediaPlayerControllerWithURL:url options:nil completion:^(BOOL didPlayToEnd, NSTimeInterval endTime, NSError * _Nullable error) {
+        
+    }];
+}
+
 - (IBAction)teleport:(id)sender
 {
     WCSession *session = [WCSession defaultSession];
