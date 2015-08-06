@@ -18,6 +18,9 @@
 
 @implementation InterfaceController
 
+NSInteger _selectedItem;
+NSDictionary *_moviesDict;
+
 - (instancetype)init {
     self = [super init];
     
