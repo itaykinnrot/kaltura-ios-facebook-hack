@@ -258,7 +258,7 @@
 				TargetAttributes = {
 					B39ED51E1B7259D1000C17F2 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = 42TE8DJ769;
+						DevelopmentTeam = VNQ8G44ZN2;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
