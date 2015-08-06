@@ -11,7 +11,6 @@
 
 
 @interface InterfaceController() <WCSessionDelegate>
-@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceMovie *player;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfacePicker *picker;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceButton *trailerButton;
 
@@ -36,13 +35,13 @@ NSDictionary *_moviesDict;
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
-    _moviesDict = @{@0:@"Social Network",
-                    @1:@"Disney",
-                    @2:@"Planes"};
-    WKPickerItem *item1 = [self createPickerItemWithImageName:@"movie1" andExtension:@"png" andCaption:@"Movie1"];
+    _moviesDict = @{@0:@"cloudy",
+                    @1:@"frozen",
+                    @2:@"inside"};
+    WKPickerItem *item1 = [self createPickerItemWithImageName:@"cloudy" andExtension:@"jpg" andCaption:@"Movie1"];
     //    [item1 setTitle:@"hello"];
-    WKPickerItem *item2 = [self createPickerItemWithImageName:@"movie2" andExtension:@"gif" andCaption:@"Movie2"];
-    WKPickerItem *item3 = [self createPickerItemWithImageName:@"movie3" andExtension:@"png" andCaption:@"Movie3"];
+    WKPickerItem *item2 = [self createPickerItemWithImageName:@"frozen" andExtension:@"jpg" andCaption:@"Movie2"];
+    WKPickerItem *item3 = [self createPickerItemWithImageName:@"inside" andExtension:@"jpg" andCaption:@"Movie3"];
     [self setButtonTitleWithIndex:0];
     [_picker setItems:@[item1, item2, item3]];
     [_picker setEnabled:YES];
@@ -71,11 +70,12 @@ NSDictionary *_moviesDict;
 }
 
 - (void) setupMovieTrailerForItem:(NSInteger)value {
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"mvcarchitecture" withExtension:@"mp4"];
-    [self.player setMovieURL:url];
-    [self presentMediaPlayerControllerWithURL:url options:nil completion:^(BOOL didPlayToEnd, NSTimeInterval endTime, NSError * _Nullable error) {
-        
-    }];
+    [self presentControllerWithName:@"player" context:nil];
+//    NSURL *url = [[NSBundle mainBundle] URLForResource:@"mvcarchitecture" withExtension:@"mp4"];
+//    [self.player setMovieURL:url];
+//    [self presentMediaPlayerControllerWithURL:url options:nil completion:^(BOOL didPlayToEnd, NSTimeInterval endTime, NSError * _Nullable error) {
+//        
+//    }];
 }
 
 - (IBAction)teleport:(id)sender

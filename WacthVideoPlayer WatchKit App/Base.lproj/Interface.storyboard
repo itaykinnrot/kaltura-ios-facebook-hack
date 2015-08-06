@@ -43,13 +43,17 @@
             </objects>
             <point key="canvasLocation" x="59" y="144"/>
         </scene>
-        <!--Interface Controller-->
+        <!--player-->
         <scene sceneID="WGJ-kN-n9r">
             <objects>
-                <controller hidesWhenLoading="NO" id="EPB-yQ-ehH">
+                <controller identifier="player" hidesWhenLoading="NO" id="EPB-yQ-ehH" customClass="PlayerControllerInterfaceController">
                     <items>
-                        <movie width="134" height="100" alignment="center" videoGravity="resize" id="VwU-wb-qrh"/>
-                        <button width="136" alignment="center" verticalAlignment="bottom" title="Button" id="hf5-9Q-gj4"/>
+                        <button width="136" alignment="center" verticalAlignment="center" title="Button" id="hf5-9Q-gj4">
+                            <connections>
+                                <action selector="moveToDevice" destination="EPB-yQ-ehH" id="xPE-1G-hmm"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Button" id="UUe-h5-Bcg"/>
                     </items>
                 </controller>
             </objects>
