@@ -31,16 +31,6 @@
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
-    [self.player setMovieURL:[self url]];
-    [self presentMediaPlayerControllerWithURL:[self url] options:nil completion:^(BOOL didPlayToEnd, NSTimeInterval endTime, NSError * _Nullable error) {
-//        [self teleport:nil];
-    }];
-    // Configure interface objects here.
-}
-
-- (NSURL *)url
-{
-    return [[NSBundle mainBundle] URLForResource:@"mvcarchitecture" withExtension:@"mp4"];
 }
 
 - (IBAction)teleport:(id)sender
@@ -49,7 +39,7 @@
     
     if ([session isReachable])
     {
-        NSDictionary *dictionary = @{ @"TextInput": @"1"};//[self url] };
+        NSDictionary *dictionary = @{ @"TextInput": @"1"};
 
         [[WCSession defaultSession] sendMessage:dictionary replyHandler:^(NSDictionary<NSString *,id> * __nonnull replyMessage) {
             NSLog(@"Reply Info: %@", replyMessage);
