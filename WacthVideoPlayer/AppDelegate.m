@@ -16,7 +16,17 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    if ([WCSession isSupported]) {
+        [WCSession defaultSession].delegate = self;
+        [[WCSession defaultSession] activateSession];
+    }
+
+    NSMutableSet *categories = [[NSMutableSet alloc] init];
+    UIUserNotificationSettings *notificationSettings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound categories:categories];
+    
+    [application registerUserNotificationSettings:notificationSettings];
+    
     return YES;
 }
 
@@ -36,15 +46,47 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    NSLog(@"active");
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-- (void)application:(UIApplication *)application handleWatchKitExtensionRequest:(nullable NSDictionary *)userInfo reply:(void(^)(NSDictionary * __nullable replyInfo))reply
-{
-
+- (void)session:(nonnull WCSession *)session didReceiveMessage:(nonnull NSDictionary<NSString *,id> *)message replyHandler:(nonnull void (^)(NSDictionary<NSString *,id> * __nonnull))replyHandler {
     
+    UIApplication *application = [UIApplication sharedApplication];
+    
+    __block UIBackgroundTaskIdentifier identifier = UIBackgroundTaskInvalid;
+
+    dispatch_block_t endBlock = ^ {
+        if (identifier != UIBackgroundTaskInvalid) {
+            [application endBackgroundTask:identifier];
+        }
+        identifier = UIBackgroundTaskInvalid;
+    };
+    
+    identifier = [application beginBackgroundTaskWithExpirationHandler:endBlock];
+    
+    replyHandler = ^(NSDictionary *replyInfo) {
+        replyHandler(replyInfo);
+        
+        endBlock();
+    };
+    
+    NSLog(@"Message: %@", message);
+    
+    replyHandler(@{@"Confirmation" : @"Text was received."});
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        UILocalNotification *localNotif = [[UILocalNotification alloc] init];
+        localNotif.alertBody = @"Watch?";
+        localNotif.soundName  = UILocalNotificationDefaultSoundName;
+        localNotif.userInfo = message;
+        [[UIApplication sharedApplication] presentLocalNotificationNow:localNotif];
+        
+    });
 }
+
 @end

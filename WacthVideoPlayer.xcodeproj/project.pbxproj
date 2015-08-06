@@ -25,18 +25,24 @@
 		B39ED5541B7259D1000C17F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B39ED5531B7259D1000C17F2 /* Assets.xcassets */; };
 		B39ED5641B725A2E000C17F2 /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B39ED5631B725A2E000C17F2 /* WatchKit.framework */; };
 		B39ED5661B725A82000C17F2 /* mvcarchitecture.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B39ED5651B725A82000C17F2 /* mvcarchitecture.mp4 */; };
-		BFB1CAF21B73773D00B5ADAB /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB1CAF11B73773D00B5ADAB /* AVKit.framework */; };
-		BFB1CAF51B73972B00B5ADAB /* OsxProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB1CAF41B73972B00B5ADAB /* OsxProxy.m */; };
-		BFB1CB041B73B33200B5ADAB /* RNFrostedSidebar.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB1CB031B73B33200B5ADAB /* RNFrostedSidebar.m */; };
-		BFB1CB0E1B73B41400B5ADAB /* burger.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB1CB051B73B41400B5ADAB /* burger.png */; };
-		BFB1CB0F1B73B41400B5ADAB /* burger@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB1CB061B73B41400B5ADAB /* burger@2x.png */; };
-		BFB1CB101B73B41400B5ADAB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB1CB071B73B41400B5ADAB /* Default-568h@2x.png */; };
-		BFB1CB111B73B41400B5ADAB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB1CB081B73B41400B5ADAB /* Default.png */; };
-		BFB1CB121B73B41400B5ADAB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB1CB091B73B41400B5ADAB /* Default@2x.png */; };
-		BFB1CB131B73B41400B5ADAB /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB1CB0A1B73B41400B5ADAB /* gear.png */; };
-		BFB1CB141B73B41400B5ADAB /* gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB1CB0B1B73B41400B5ADAB /* gear@2x.png */; };
-		BFB1CB151B73B41400B5ADAB /* globe.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB1CB0C1B73B41400B5ADAB /* globe.png */; };
-		BFB1CB161B73B41400B5ADAB /* globe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB1CB0D1B73B41400B5ADAB /* globe@2x.png */; };
+		B3EFB99D1B73AC3100370A9C /* PlayerControllerInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EFB99C1B73AC3000370A9C /* PlayerControllerInterfaceController.m */; };
+		B3EFB9A21B73B16200370A9C /* Cloudy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3EFB99E1B73B16200370A9C /* Cloudy.jpg */; };
+		B3EFB9A31B73B16200370A9C /* Inside.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B3EFB99F1B73B16200370A9C /* Inside.mp4 */; };
+		B3EFB9A41B73B16200370A9C /* Inside.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3EFB9A01B73B16200370A9C /* Inside.jpg */; };
+		B3EFB9A51B73B16200370A9C /* Cloudy.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B3EFB9A11B73B16200370A9C /* Cloudy.mp4 */; };
+		B3EFB9A71B73B17E00370A9C /* Frozen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B3EFB9A61B73B17E00370A9C /* Frozen.mp4 */; };
+		B3EFB9A91B73B1B400370A9C /* Frozen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3EFB9A81B73B1B400370A9C /* Frozen.jpg */; };
+		BFB1CB211B73BDF900B5ADAB /* burger.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB1CB171B73BDF900B5ADAB /* burger.png */; };
+		BFB1CB221B73BDF900B5ADAB /* burger@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB1CB181B73BDF900B5ADAB /* burger@2x.png */; };
+		BFB1CB231B73BDF900B5ADAB /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB1CB191B73BDF900B5ADAB /* gear.png */; };
+		BFB1CB241B73BDF900B5ADAB /* gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB1CB1A1B73BDF900B5ADAB /* gear@2x.png */; };
+		BFB1CB251B73BDF900B5ADAB /* globe.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB1CB1B1B73BDF900B5ADAB /* globe.png */; };
+		BFB1CB261B73BDF900B5ADAB /* globe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB1CB1C1B73BDF900B5ADAB /* globe@2x.png */; };
+		BFB1CB271B73BDF900B5ADAB /* OsxProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB1CB1E1B73BDF900B5ADAB /* OsxProxy.m */; };
+		BFB1CB281B73BDF900B5ADAB /* RNFrostedSidebar.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB1CB201B73BDF900B5ADAB /* RNFrostedSidebar.m */; };
+		BFB1CB2A1B73BE3200B5ADAB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB1CB291B73BE3200B5ADAB /* UIKit.framework */; };
+		BFB1CB2C1B73BE3800B5ADAB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB1CB2B1B73BE3800B5ADAB /* AVFoundation.framework */; };
+		BFB1CB2E1B73BE6400B5ADAB /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB1CB2D1B73BE6400B5ADAB /* AVKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +88,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		89F373031B7386190019F4DA /* WacthVideoPlayer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WacthVideoPlayer.entitlements; sourceTree = "<group>"; };
 		B39ED51F1B7259D1000C17F2 /* WacthVideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WacthVideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B39ED5231B7259D1000C17F2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B39ED5251B7259D1000C17F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -107,20 +114,27 @@
 		B39ED5551B7259D1000C17F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B39ED5631B725A2E000C17F2 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.0.sdk/System/Library/Frameworks/WatchKit.framework; sourceTree = DEVELOPER_DIR; };
 		B39ED5651B725A82000C17F2 /* mvcarchitecture.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mvcarchitecture.mp4; sourceTree = "<group>"; };
-		BFB1CAF11B73773D00B5ADAB /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
-		BFB1CAF31B73972B00B5ADAB /* OsxProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OsxProxy.h; sourceTree = "<group>"; };
-		BFB1CAF41B73972B00B5ADAB /* OsxProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OsxProxy.m; sourceTree = "<group>"; };
-		BFB1CB021B73B33200B5ADAB /* RNFrostedSidebar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNFrostedSidebar.h; sourceTree = "<group>"; };
-		BFB1CB031B73B33200B5ADAB /* RNFrostedSidebar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNFrostedSidebar.m; sourceTree = "<group>"; };
-		BFB1CB051B73B41400B5ADAB /* burger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = burger.png; sourceTree = "<group>"; };
-		BFB1CB061B73B41400B5ADAB /* burger@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "burger@2x.png"; sourceTree = "<group>"; };
-		BFB1CB071B73B41400B5ADAB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		BFB1CB081B73B41400B5ADAB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		BFB1CB091B73B41400B5ADAB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		BFB1CB0A1B73B41400B5ADAB /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear.png; sourceTree = "<group>"; };
-		BFB1CB0B1B73B41400B5ADAB /* gear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gear@2x.png"; sourceTree = "<group>"; };
-		BFB1CB0C1B73B41400B5ADAB /* globe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = globe.png; sourceTree = "<group>"; };
-		BFB1CB0D1B73B41400B5ADAB /* globe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "globe@2x.png"; sourceTree = "<group>"; };
+		B3EFB99B1B73AC3000370A9C /* PlayerControllerInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerControllerInterfaceController.h; sourceTree = "<group>"; };
+		B3EFB99C1B73AC3000370A9C /* PlayerControllerInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerControllerInterfaceController.m; sourceTree = "<group>"; };
+		B3EFB99E1B73B16200370A9C /* Cloudy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cloudy.jpg; sourceTree = "<group>"; };
+		B3EFB99F1B73B16200370A9C /* Inside.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Inside.mp4; sourceTree = "<group>"; };
+		B3EFB9A01B73B16200370A9C /* Inside.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Inside.jpg; sourceTree = "<group>"; };
+		B3EFB9A11B73B16200370A9C /* Cloudy.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cloudy.mp4; sourceTree = "<group>"; };
+		B3EFB9A61B73B17E00370A9C /* Frozen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Frozen.mp4; sourceTree = "<group>"; };
+		B3EFB9A81B73B1B400370A9C /* Frozen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Frozen.jpg; sourceTree = "<group>"; };
+		BFB1CB171B73BDF900B5ADAB /* burger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = burger.png; sourceTree = "<group>"; };
+		BFB1CB181B73BDF900B5ADAB /* burger@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "burger@2x.png"; sourceTree = "<group>"; };
+		BFB1CB191B73BDF900B5ADAB /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear.png; sourceTree = "<group>"; };
+		BFB1CB1A1B73BDF900B5ADAB /* gear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gear@2x.png"; sourceTree = "<group>"; };
+		BFB1CB1B1B73BDF900B5ADAB /* globe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = globe.png; sourceTree = "<group>"; };
+		BFB1CB1C1B73BDF900B5ADAB /* globe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "globe@2x.png"; sourceTree = "<group>"; };
+		BFB1CB1D1B73BDF900B5ADAB /* OsxProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OsxProxy.h; sourceTree = "<group>"; };
+		BFB1CB1E1B73BDF900B5ADAB /* OsxProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OsxProxy.m; sourceTree = "<group>"; };
+		BFB1CB1F1B73BDF900B5ADAB /* RNFrostedSidebar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNFrostedSidebar.h; sourceTree = "<group>"; };
+		BFB1CB201B73BDF900B5ADAB /* RNFrostedSidebar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNFrostedSidebar.m; sourceTree = "<group>"; };
+		BFB1CB291B73BE3200B5ADAB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BFB1CB2B1B73BE3800B5ADAB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BFB1CB2D1B73BE6400B5ADAB /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +142,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFB1CAF21B73773D00B5ADAB /* AVKit.framework in Frameworks */,
+				BFB1CB2E1B73BE6400B5ADAB /* AVKit.framework in Frameworks */,
+				BFB1CB2C1B73BE3800B5ADAB /* AVFoundation.framework in Frameworks */,
+				BFB1CB2A1B73BE3200B5ADAB /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,7 +162,9 @@
 		B39ED5161B7259D1000C17F2 = {
 			isa = PBXGroup;
 			children = (
-				BFB1CAF11B73773D00B5ADAB /* AVKit.framework */,
+				BFB1CB2D1B73BE6400B5ADAB /* AVKit.framework */,
+				BFB1CB2B1B73BE3800B5ADAB /* AVFoundation.framework */,
+				BFB1CB291B73BE3200B5ADAB /* UIKit.framework */,
 				B39ED5631B725A2E000C17F2 /* WatchKit.framework */,
 				B39ED5211B7259D1000C17F2 /* WacthVideoPlayer */,
 				B39ED53A1B7259D1000C17F2 /* WacthVideoPlayer WatchKit App */,
@@ -168,17 +186,17 @@
 		B39ED5211B7259D1000C17F2 /* WacthVideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				BFB1CB051B73B41400B5ADAB /* burger.png */,
-				BFB1CB061B73B41400B5ADAB /* burger@2x.png */,
-				BFB1CB071B73B41400B5ADAB /* Default-568h@2x.png */,
-				BFB1CB081B73B41400B5ADAB /* Default.png */,
-				BFB1CB091B73B41400B5ADAB /* Default@2x.png */,
-				BFB1CB0A1B73B41400B5ADAB /* gear.png */,
-				BFB1CB0B1B73B41400B5ADAB /* gear@2x.png */,
-				BFB1CB0C1B73B41400B5ADAB /* globe.png */,
-				BFB1CB0D1B73B41400B5ADAB /* globe@2x.png */,
-				BFB1CB021B73B33200B5ADAB /* RNFrostedSidebar.h */,
-				BFB1CB031B73B33200B5ADAB /* RNFrostedSidebar.m */,
+				BFB1CB171B73BDF900B5ADAB /* burger.png */,
+				BFB1CB181B73BDF900B5ADAB /* burger@2x.png */,
+				BFB1CB191B73BDF900B5ADAB /* gear.png */,
+				BFB1CB1A1B73BDF900B5ADAB /* gear@2x.png */,
+				BFB1CB1B1B73BDF900B5ADAB /* globe.png */,
+				BFB1CB1C1B73BDF900B5ADAB /* globe@2x.png */,
+				BFB1CB1D1B73BDF900B5ADAB /* OsxProxy.h */,
+				BFB1CB1E1B73BDF900B5ADAB /* OsxProxy.m */,
+				BFB1CB1F1B73BDF900B5ADAB /* RNFrostedSidebar.h */,
+				BFB1CB201B73BDF900B5ADAB /* RNFrostedSidebar.m */,
+				89F373031B7386190019F4DA /* WacthVideoPlayer.entitlements */,
 				B39ED5251B7259D1000C17F2 /* AppDelegate.h */,
 				B39ED5261B7259D1000C17F2 /* AppDelegate.m */,
 				B39ED5281B7259D1000C17F2 /* ViewController.h */,
@@ -188,8 +206,6 @@
 				B39ED5301B7259D1000C17F2 /* LaunchScreen.storyboard */,
 				B39ED5331B7259D1000C17F2 /* Info.plist */,
 				B39ED5221B7259D1000C17F2 /* Supporting Files */,
-				BFB1CAF31B73972B00B5ADAB /* OsxProxy.h */,
-				BFB1CAF41B73972B00B5ADAB /* OsxProxy.m */,
 			);
 			path = WacthVideoPlayer;
 			sourceTree = "<group>";
@@ -215,11 +231,19 @@
 		B39ED5491B7259D1000C17F2 /* WacthVideoPlayer WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				B3EFB99B1B73AC3000370A9C /* PlayerControllerInterfaceController.h */,
+				B3EFB99C1B73AC3000370A9C /* PlayerControllerInterfaceController.m */,
 				B39ED54A1B7259D1000C17F2 /* InterfaceController.h */,
 				B39ED54B1B7259D1000C17F2 /* InterfaceController.m */,
 				B39ED54D1B7259D1000C17F2 /* ExtensionDelegate.h */,
 				B39ED54E1B7259D1000C17F2 /* ExtensionDelegate.m */,
 				B39ED5501B7259D1000C17F2 /* GlanceController.h */,
+				B3EFB9A61B73B17E00370A9C /* Frozen.mp4 */,
+				B3EFB99F1B73B16200370A9C /* Inside.mp4 */,
+				B3EFB9A11B73B16200370A9C /* Cloudy.mp4 */,
+				B3EFB99E1B73B16200370A9C /* Cloudy.jpg */,
+				B3EFB9A81B73B1B400370A9C /* Frozen.jpg */,
+				B3EFB9A01B73B16200370A9C /* Inside.jpg */,
 				B39ED5511B7259D1000C17F2 /* GlanceController.m */,
 				B39ED5651B725A82000C17F2 /* mvcarchitecture.mp4 */,
 				B39ED5531B7259D1000C17F2 /* Assets.xcassets */,
@@ -295,13 +319,18 @@
 				TargetAttributes = {
 					B39ED51E1B7259D1000C17F2 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 42TE8DJ769;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					B39ED5351B7259D1000C17F2 = {
 						CreatedOnToolsVersion = 7.0;
 					};
 					B39ED5441B7259D1000C17F2 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = MK4GH73U54;
 					};
 				};
 			};
@@ -331,18 +360,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B39ED5321B7259D1000C17F2 /* LaunchScreen.storyboard in Resources */,
-				BFB1CB161B73B41400B5ADAB /* globe@2x.png in Resources */,
-				BFB1CB0F1B73B41400B5ADAB /* burger@2x.png in Resources */,
-				BFB1CB0E1B73B41400B5ADAB /* burger.png in Resources */,
-				BFB1CB121B73B41400B5ADAB /* Default@2x.png in Resources */,
-				BFB1CB141B73B41400B5ADAB /* gear@2x.png in Resources */,
-				BFB1CB111B73B41400B5ADAB /* Default.png in Resources */,
+				BFB1CB231B73BDF900B5ADAB /* gear.png in Resources */,
+				BFB1CB261B73BDF900B5ADAB /* globe@2x.png in Resources */,
+				BFB1CB221B73BDF900B5ADAB /* burger@2x.png in Resources */,
+				BFB1CB251B73BDF900B5ADAB /* globe.png in Resources */,
+				BFB1CB211B73BDF900B5ADAB /* burger.png in Resources */,
 				B39ED52F1B7259D1000C17F2 /* Assets.xcassets in Resources */,
-				BFB1CB131B73B41400B5ADAB /* gear.png in Resources */,
 				B39ED52D1B7259D1000C17F2 /* Main.storyboard in Resources */,
-				BFB1CB151B73B41400B5ADAB /* globe.png in Resources */,
-				BFB1CB101B73B41400B5ADAB /* Default-568h@2x.png in Resources */,
 				B374CFD01B7278080094E3B2 /* mvcarchitecture.mp4 in Resources */,
+				BFB1CB241B73BDF900B5ADAB /* gear@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,8 +386,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3EFB9A51B73B16200370A9C /* Cloudy.mp4 in Resources */,
+				B3EFB9A21B73B16200370A9C /* Cloudy.jpg in Resources */,
+				B3EFB9A71B73B17E00370A9C /* Frozen.mp4 in Resources */,
+				B3EFB9A31B73B16200370A9C /* Inside.mp4 in Resources */,
 				B39ED5541B7259D1000C17F2 /* Assets.xcassets in Resources */,
+				B3EFB9A91B73B1B400370A9C /* Frozen.jpg in Resources */,
 				B374CFD11B7278090094E3B2 /* mvcarchitecture.mp4 in Resources */,
+				B3EFB9A41B73B16200370A9C /* Inside.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,8 +405,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B39ED52A1B7259D1000C17F2 /* ViewController.m in Sources */,
-				BFB1CB041B73B33200B5ADAB /* RNFrostedSidebar.m in Sources */,
-				BFB1CAF51B73972B00B5ADAB /* OsxProxy.m in Sources */,
+				BFB1CB281B73BDF900B5ADAB /* RNFrostedSidebar.m in Sources */,
+				BFB1CB271B73BDF900B5ADAB /* OsxProxy.m in Sources */,
 				B39ED5271B7259D1000C17F2 /* AppDelegate.m in Sources */,
 				B39ED5241B7259D1000C17F2 /* main.m in Sources */,
 			);
@@ -386,6 +418,7 @@
 			files = (
 				B39ED54F1B7259D1000C17F2 /* ExtensionDelegate.m in Sources */,
 				B39ED54C1B7259D1000C17F2 /* InterfaceController.m in Sources */,
+				B3EFB99D1B73AC3100370A9C /* PlayerControllerInterfaceController.m in Sources */,
 				B39ED5521B7259D1000C17F2 /* GlanceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,7 +483,6 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Eliza Sapir (2FQZ6B8TJ4)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -473,7 +505,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "843e5805-196a-452e-8057-bc1bb69df5cd";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -510,7 +541,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "843e5805-196a-452e-8057-bc1bb69df5cd";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -519,13 +549,11 @@
 		B39ED5591B7259D1000C17F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "WacthVideoPlayer WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.WacthVideoPlayer.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -536,13 +564,11 @@
 		B39ED55A1B7259D1000C17F2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "WacthVideoPlayer WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.WacthVideoPlayer.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -586,12 +612,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Eliza Sapir (JNZ3J44F89)";
+				CODE_SIGN_ENTITLEMENTS = WacthVideoPlayer/WacthVideoPlayer.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WacthVideoPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.WacthVideoPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "843e5805-196a-452e-8057-bc1bb69df5cd";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -599,11 +627,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WacthVideoPlayer/WacthVideoPlayer.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WacthVideoPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.WacthVideoPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "843e5805-196a-452e-8057-bc1bb69df5cd";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
