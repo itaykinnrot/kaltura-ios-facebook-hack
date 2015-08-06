@@ -54,7 +54,8 @@
 
 - (void)peerConnected {
     NSLog(@"Peer connected");
-    [self.proxy sendString:self.mediaUrl];
+    [self.proxy sendDictionary:@{@"urlString" : self.mediaUrl,
+                                 @"offset" : @(CMTimeGetSeconds(self.avPlayerViewcontroller.player.currentTime))}];
 }
 
 @end

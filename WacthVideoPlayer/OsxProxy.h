@@ -21,8 +21,8 @@
 - (void)start;
 
 - (void)sendData:(NSData *)data;
-
 - (void)sendString:(NSString *)string;
+- (void)sendDictionary:(NSDictionary *)dictionary;
 
 @property (weak) id<OsxProxyDelegate> delegate;
 

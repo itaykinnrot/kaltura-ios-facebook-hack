@@ -97,6 +97,10 @@ static NSString *kServiceType = @"iosToOsx";
     [self sendData:[string dataUsingEncoding:NSUTF8StringEncoding]];
 }
 
+- (void)sendDictionary:(NSDictionary *)dictionary {
+    [self sendData:[NSKeyedArchiver archivedDataWithRootObject:dictionary]];
+}
+
 - (void)session:(MCSession *)session peer:(MCPeerID *)peerID didChangeState:(MCSessionState)state {
     switch (state) {
         case MCSessionStateConnecting:
