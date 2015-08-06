@@ -9,7 +9,7 @@
 #import "OsxProxy.h"
 @import MultipeerConnectivity;
 
-static NSString *kServiceType = @"bamba";
+static NSString *kServiceType = @"iosToOsx";
 
 @interface OsxProxy () <MCNearbyServiceAdvertiserDelegate, MCNearbyServiceBrowserDelegate, MCSessionDelegate>
 
